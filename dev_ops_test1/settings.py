@@ -26,7 +26,9 @@ SECRET_KEY = 'w+(3s00$*8rct&^#2r348h&x&-2bn$w387rsw(v_4dm$u$_nsu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+AUTH_USER_MODEL = 'user.UserProfile'
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'user',
     'server',
+    'user_operation',
     #'extra_apps'
     'xadmin',
     'crispy_forms',
@@ -133,5 +137,19 @@ USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'utils.mypagination.CustomPagination',
+
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # 'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
+    ),
+}
