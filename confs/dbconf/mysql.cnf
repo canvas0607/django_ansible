@@ -1,6 +1,6 @@
 [client]
-host = 192.168.199.209
+host = 111.231.203.174
 database = dev_ops_test
-user = root
-password = tusbasa1
+user = sanqianyun
+password = moist-master
 default-character-set = utf8
