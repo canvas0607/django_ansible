@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^admin/', xadmin.site.urls),
 
     # 用户登录
-    url(r'^login/user$', obtain_jwt_token, name='user-login'),
+    url(r'^login/user/$', obtain_jwt_token, name='user-login'),
 
 
     # 自动生成文档使用的接口配置
