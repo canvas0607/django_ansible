@@ -2,11 +2,10 @@
 PLUGINS = (
     'actions', 
     'filters', 
-    'bookmark', 
+    # 'bookmark',
     'export', 
     'layout', 
-    'refresh', 
-    'sortable', 
+    'refresh',
     'details',
     'editable', 
     'relate', 
@@ -21,13 +20,16 @@ PLUGINS = (
     'images', 
     'auth', 
     'multiselect', 
-    'themes', 
+    # 'themes',
     'aggregation', 
     'mobile', 
     'passwords',
     'sitemenu', 
     'language', 
-    'quickfilter'
+    'quickfilter',
+    'sortablelist',
+    'ueditor',
+    #'excel'
 )
 
 

@@ -7,9 +7,12 @@ from django.contrib.contenttypes.forms import BaseGenericInlineFormSet, generic_
 from django.template import loader
 from django.template.loader import render_to_string
 from django.contrib.auth import get_permission_codename
+from django.utils import six
+from django.utils.encoding import smart_text
 from crispy_forms.utils import TEMPLATE_PACK
 
 from xadmin.layout import FormHelper, Layout, flatatt, Container, Column, Field, Fieldset
+from xadmin.plugins.utils import get_context_dict
 from xadmin.sites import site
 from xadmin.views import BaseAdminPlugin, ModelFormAdminView, DetailAdminView, filter_hook
 
@@ -112,10 +115,11 @@ style_manager.register_style("table", TableInlineStyle)
 
 def replace_field_to_value(layout, av):
     if layout:
+        cls_str = str if six.PY3 else basestring
         for i, lo in enumerate(layout.fields):
             if isinstance(lo, Field) or issubclass(lo.__class__, Field):
                 layout.fields[i] = ShowField(av, *lo.fields, **lo.attrs)
-            elif isinstance(lo, basestring):
+            elif isinstance(lo, cls_str):
                 layout.fields[i] = ShowField(av, lo)
             elif hasattr(lo, 'get_field_names'):
                 replace_field_to_value(lo, av)
@@ -228,7 +232,7 @@ class InlineModelAdmin(ModelFormAdminView):
                         label = None
                         if readonly_field in inst._meta.get_all_field_names():
                             label = inst._meta.get_field(readonly_field).verbose_name
-                            value = unicode(getattr(inst, readonly_field))
+                            value = smart_text(getattr(inst, readonly_field))
                         elif inspect.ismethod(getattr(inst, readonly_field, None)):
                             value = getattr(inst, readonly_field)()
                             label = getattr(getattr(inst, readonly_field), 'short_description', readonly_field)
@@ -333,8 +337,14 @@ class InlineFormset(Fieldset):
         self.extra_attrs = formset.style.get_attrs()
 
     def render(self, form, form_style, context, template_pack=TEMPLATE_PACK, **kwargs):
-        return render_to_string(
-            self.template, dict({'formset': self, 'prefix': self.formset.prefix, 'inline_style': self.inline_style}, **self.extra_attrs))
+        context = get_context_dict(context)
+        context.update(dict(
+            formset=self,
+            prefix=self.formset.prefix,
+            inline_style=self.inline_style,
+            **self.extra_attrs
+        ))
+        return render_to_string(self.template, context)
 
 
 class Inline(Fieldset):
