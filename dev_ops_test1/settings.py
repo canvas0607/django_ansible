@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     #'extra_apps'
     'xadmin',
     'crispy_forms',
-    'reversion'
+    'reversion',
+    'DjangoUeditor',
 ]
 
 MIDDLEWARE = [
