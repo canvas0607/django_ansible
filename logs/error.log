@@ -1,0 +1,23 @@
+[2018-03-10 10:50:27 +0800] [18547] [INFO] Starting gunicorn 19.7.1
+[2018-03-10 10:50:27 +0800] [18547] [INFO] Listening at: http://127.0.0.1:8006 (18547)
+[2018-03-10 10:50:27 +0800] [18547] [INFO] Using worker: sync
+[2018-03-10 10:50:27 +0800] [18550] [INFO] Booting worker with pid: 18550
+[2018-03-10 10:50:27 +0800] [18552] [INFO] Booting worker with pid: 18552
+[2018-03-10 10:50:28 +0800] [18556] [INFO] Booting worker with pid: 18556
+[2018-03-10 10:50:28 +0800] [18558] [INFO] Booting worker with pid: 18558
+[2018-03-10 10:50:28 +0800] [18561] [INFO] Booting worker with pid: 18561
+[2018-03-10 10:50:28 +0800] [18565] [INFO] Booting worker with pid: 18565
+[2018-03-10 10:50:28 +0800] [18567] [INFO] Booting worker with pid: 18567
+[2018-03-10 10:50:28 +0800] [18570] [INFO] Booting worker with pid: 18570
+[2018-03-10 10:50:28 +0800] [18573] [INFO] Booting worker with pid: 18573
+[2018-03-10 10:50:54 +0800] [18547] [INFO] Handling signal: int
+[2018-03-10 10:50:54 +0800] [18570] [INFO] Worker exiting (pid: 18570)
+[2018-03-10 10:50:54 +0800] [18565] [INFO] Worker exiting (pid: 18565)
+[2018-03-10 10:50:54 +0800] [18552] [INFO] Worker exiting (pid: 18552)
+[2018-03-10 10:50:54 +0800] [18556] [INFO] Worker exiting (pid: 18556)
+[2018-03-10 10:50:54 +0800] [18550] [INFO] Worker exiting (pid: 18550)
+[2018-03-10 10:50:54 +0800] [18567] [INFO] Worker exiting (pid: 18567)
+[2018-03-10 10:50:54 +0800] [18558] [INFO] Worker exiting (pid: 18558)
+[2018-03-10 10:50:54 +0800] [18573] [INFO] Worker exiting (pid: 18573)
+[2018-03-10 10:50:54 +0800] [18561] [INFO] Worker exiting (pid: 18561)
+[2018-03-10 10:50:55 +0800] [18547] [INFO] Shutting down: Master
