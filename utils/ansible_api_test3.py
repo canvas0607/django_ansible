@@ -159,7 +159,7 @@ class AnsibleApi(object):
 if __name__ == "__main__":
     var_man = MyVariableManger()
     var_man.variables = [
-        dict(hostname='tst', host_ip='111.231.203.175', host_port='22', password='pm13658034488', user='root'),
+        dict(hostname=None, host_ip='111.231.203.175', host_port=None, password='pm13658034488', user='root'),
         dict(hostname='tst1', host_ip='111.231.203.174', host_port='22', password='pm13658034488', user='root'),
         dict(hostname='tst2', host_ip='127.0.0.1', host_port='22', password='tusbasa1', user='canvas')
     ]

@@ -17,3 +17,4 @@ class ServerDetailViewSet(viewsets.ReadOnlyModelViewSet):
     """
     serializer_class = ServerDetailSerializer
     queryset = ServerDetail.objects.all()
+
