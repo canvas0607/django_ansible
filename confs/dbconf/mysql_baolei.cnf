@@ -1,5 +1,5 @@
 [client]
-host = 127.0.0.1
+host = 183.61.128.75
 database = dev_ops_test
 user = datawrit
 password = pwcqz
