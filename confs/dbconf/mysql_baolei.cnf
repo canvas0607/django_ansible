@@ -1,0 +1,7 @@
+[client]
+host = 127.0.0.1
+database = dev_ops_test
+user = root
+password = pwcqz.#21
+port = 2433
+default-character-set = utf8

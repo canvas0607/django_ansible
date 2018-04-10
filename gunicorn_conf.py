@@ -3,7 +3,7 @@ import os
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # unix:file_path 使用socket方式
-bind = "127.0.0.1:38006"
+bind = "127.0.0.1:8005"
 #2-4 x $(NUM_CORES) range
 workers = multiprocessing.cpu_count() * 2 + 1
 #port = 8002
