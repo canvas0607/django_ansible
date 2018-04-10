@@ -8,7 +8,7 @@ from .serializers import ServerDetailSerializer
 
 from .models import ServerDetail
 
-class ServerDetailViewSet(viewsets.ReadOnlyModelViewSet):
+class ServerDetailViewSet(viewsets.ReadOnlyModelViewSet,viewsets.GenericViewSet):
     """
     list:
         获取所有服务器信息

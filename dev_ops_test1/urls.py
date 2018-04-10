@@ -22,10 +22,12 @@ from rest_framework.routers import DefaultRouter
 from rest_framework.documentation import include_docs_urls
 
 from server.views import ServerDetailViewSet
+from user_operation.views import UserServerCommandLineViewSet
 
 router = DefaultRouter()
 
 router.register(r'^servers/detail',ServerDetailViewSet)
+router.register(r'^operator/commandline',UserServerCommandLineViewSet)
 
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
