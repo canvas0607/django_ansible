@@ -1,8 +1,12 @@
-from .models import ServerDetail,ServerStatus
+from .models import ServerDetail, ServerStatus
 import xadmin
+
+
 class ServerDetailAdmin(object):
-    pass
+    class ServerStatusInline(object):
+        model = ServerStatus
 
-xadmin.site.register(ServerDetail,ServerDetailAdmin)
+    inlines = [ServerStatusInline]
 
 
+xadmin.site.register(ServerDetail, ServerDetailAdmin)

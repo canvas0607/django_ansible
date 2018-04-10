@@ -8,6 +8,7 @@ import django
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DJANGO_DIR = os.path.join(BASE_DIR, 'dev_ops_test1')
 sys.path.insert(0, os.path.abspath(DJANGO_DIR))
+sys.path.insert(0, os.path.abspath(BASE_DIR))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'dev_ops_test1.settings'
 django.setup()
 
