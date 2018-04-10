@@ -10,7 +10,7 @@ workers = multiprocessing.cpu_count() * 2 + 1
 backlog = 2048 #就是设置允许挂起的连接数的最大值
 #timeout默认值：30
 #reload 默认值：False 重载 更改代码的时候重启workers， 只建议在开发过程中开启。
-reload = True
+reload = False
 #daemon以守护进程形式来运行Gunicorn进程。默认值：False
 
 #accesslog 设置访问日志存放的地方
