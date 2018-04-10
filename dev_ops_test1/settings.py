@@ -29,7 +29,10 @@ DEBUG = True
 
 AUTH_USER_MODEL = 'user.UserProfile'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '*',
+    '127.0.0.1'
+    ]
 
 
 # Application definition
@@ -172,6 +175,7 @@ CORS_ALLOW_METHODS = (
     'PATCH',
     'POST',
     'PUT',
+    'HEAD'
 )
 
 JWT_AUTH = {
