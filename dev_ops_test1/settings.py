@@ -31,7 +31,8 @@ AUTH_USER_MODEL = 'user.UserProfile'
 
 ALLOWED_HOSTS = [
     '*',
-    '127.0.0.1'
+    '127.0.0.1',
+    "183.61.128.75"
     ]
 
 
@@ -165,7 +166,8 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = (
     "*",
-    "127.0.0.1"
+    "127.0.0.1",
+    "183.61.128.75"
 )
 
 CORS_ALLOW_METHODS = (
