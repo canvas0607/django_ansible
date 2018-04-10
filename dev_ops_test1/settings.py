@@ -100,7 +100,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': os.path.join(BASE_DIR, 'confs', 'dbconf', 'mysql.cnf'),
+            'read_default_file': os.path.join(BASE_DIR, 'confs', 'dbconf', 'mysql_baolei.cnf'),
             'init_command': 'SET default_storage_engine=INNODB',
         },
 
