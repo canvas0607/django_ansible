@@ -71,10 +71,13 @@ def exec_all_servers():
                     cpu_per=res['cpu_per'],
                 )
             )
+            server.server_is_active = True
+            server.ssh_is_active = True
+            server.save()
         else:
             #如果连不通 则取消服务器状态
             server.server_is_active = False
-            server.ssh_error_msg = False
+            server.ssh_is_active = False
             server.save()
 
 
