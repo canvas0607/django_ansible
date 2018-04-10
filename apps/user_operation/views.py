@@ -38,6 +38,7 @@ class UserServerCommandLineViewSet(viewsets.ReadOnlyModelViewSet,mixins.CreateMo
         data = serializer.validated_data
         server = data['server']
         command = data['command']
+
         try:
             api = Api(
                 server.ip,
