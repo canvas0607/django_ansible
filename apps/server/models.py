@@ -28,7 +28,7 @@ class ServerDetail(models.Model):
 
 
 class ServerStatus(models.Model):
-    server = models.OneToOneField(ServerDetail,verbose_name='对应服务器',help_text='对应服务器')
+    server = models.OneToOneField(ServerDetail,verbose_name='对应服务器',help_text='对应服务器',related_name='server_status')
     memory_used = models.CharField(max_length=15,verbose_name='内存使用空间大小',help_text='内存使用空间大小')
     memory_free = models.CharField(max_length=15,verbose_name='内存空置空间大小',help_text='内存空置空间大小')
     cpu_per = models.CharField(max_length=5,verbose_name='cpu使用率',help_text='cpu使用率')
