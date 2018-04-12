@@ -23,7 +23,7 @@ class UserServerCommandLineViewSet(viewsets.ReadOnlyModelViewSet,mixins.CreateMo
 
     queryset = UserServerCommandLine.objects.all()
 
-    #authentication_classes = auth_pattern
+    authentication_classes = auth_pattern
     #permission_classes = (IsAuthenticated,)
 
     def get_serializer_class(self):
