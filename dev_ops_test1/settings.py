@@ -50,12 +50,14 @@ INSTALLED_APPS = [
     'user',
     'server',
     'user_operation',
+    'project',
     #'extra_apps'
     'xadmin',
     'crispy_forms',
     'reversion',
     'DjangoUeditor',
-    'corsheaders'
+    'corsheaders',
+    'guardian',
 ]
 
 MIDDLEWARE = [
@@ -189,4 +191,10 @@ JWT_AUTH = {
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=1),
 
 }
+
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend', # this is default
+    'guardian.backends.ObjectPermissionBackend',
+)
 
